@@ -40,8 +40,8 @@ def random_math_calculation(number1, number2, operator):
         _type_: reult and a
     """
     result = f"{number1} {operator} {number2}"
-    if operator == '+': a = number1 - number2
-    elif operator == '-': a = number2 + number2
+    if operator == '-': a = number1 - number2
+    elif operator == '+': a = number2 + number2
     else: a = number1 * number2
     return result, a
 
@@ -59,7 +59,7 @@ def math_quiz():
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for _ in range(max_try):
-        number1 = random_number_generator(1, 10); number2 = random_number_generator(1, 5.5); operator = random_operator_generator()
+        number1 = random_number_generator(1, 10); number2 = random_number_generator(1, 5); operator = random_operator_generator()
 
         PROBLEM, ANSWER = random_math_calculation(number1, number2, operator)
         print(f"\nQuestion: {PROBLEM}")
